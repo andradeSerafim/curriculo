@@ -1,0 +1,185 @@
+/*O mais recomendado seria ordenar as classes do CSS na ordem nas quais aparecem, mas eu já havia começado a digitar em ordem alfabética.*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@1,300&display=swap');
+
+:root {
+    --cor-principal: #00022e;
+    --cor-branca: #F6F6F6;
+    --azul-claro: #22D4FD;
+    --destaque-de-texto-1:#ffb452;
+    --destaque-de-texto-2:#F5EA25;
+    /* --cor-hover: #272727; */
+    --cor-hover: #000;
+
+    --fonte-menor: 1.5rem;
+    --fonte-maxima: 3rem;
+    --margens-laterais: 15%
+} /* Variáveis precisam ser declaradas com -- no início para que reconhecimento de variável, mas não propriedade.*/
+
+* {
+    margin: 0;
+    padding: 0
+} /*Todos so elementos*/
+
+body{
+    background-color: var(--cor-principal);
+    box-sizing: border-box; /*O conteúdo será encolhido para que o conteúdo filho fique todo dentro do pai.*/
+    color: var(--cor-branca);
+    font: Times;
+    height: 100vh; /*100% do viewbody height. O conteúdo body ocupará toda a página.*/
+    margin-top: 4vh;
+}
+
+.cabecalho__english {
+    display: none;
+}
+
+.idiom_change {
+    border-radius: 10px;
+    border-width: 1px;
+    color: var(--azul-claro);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--fonte-menor);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.idiom_change, .cabecalho__english {
+    margin-left: var(--margens-laterais);
+}
+
+.idiom_change:hover {
+    color: var(--destaque-de-texto-1);
+}
+
+.cabecalho {
+    padding: 2% 0 0 15%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link, 
+.idiom_change {
+    border-radius: 10px;
+    border-width: 1px;
+    color: var(--azul-claro);
+    font-family: 'Montserrat', sans-serif;
+    font-size: var(--fonte-menor);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.cabecalho__english:checked ~ .foto_e_descricao > .foto_e_descricao__list > .foto_e_descricao-eng,
+
+.cabecalho__english:checked ~ .foto_e_descricao > .foto_e_descricao__list > .foto_e_descricao__sobremim > .foto_e_descricao__sobremim-eng,
+
+.cabecalho__english:checked ~ .rodape > .descricoesminhas-eng {
+    display: none;
+}
+
+.cabecalho__english:not(:checked) ~ .foto_e_descricao > .foto_e_descricao__list > .foto_e_descricao-port,
+
+.cabecalho__english:not(:checked) ~ .foto_e_descricao > .foto_e_descricao__list > .foto_e_descricao__sobremim > .foto_e_descricao__sobremim-port,
+
+.cabecalho__english:not(:checked) ~ .rodape > .descricoesminhas-port  {
+    display: none;
+}
+
+.cabecalho__menu__link:hover {
+    background-color: var(--cor-hover);
+}
+
+a {
+    color: var(--cor-branca);
+    border: 2px solid var(--azul-claro);
+    padding: 24px;
+    /* background-color: #F5186E; */
+}
+
+strong {
+    color: var(--destaque-de-texto-1);
+} /*Esse ponto indica que é uma classe, mas não uma tag.*/
+
+.titulo_destaque {
+    color: var(--destaque-de-texto-2);
+} /*Esse ponto indica que é uma classe, mas não uma tag.*/
+
+.foto_e_descricao {
+    display: flex;
+    margin: 1vw;
+    gap: 1vw;
+}
+
+.foto_e_descricao__descricoesminhas {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    padding: 0 0 0 10px;
+}
+
+.curriculum {
+    width: 50vw;
+}
+
+.foto_e_descricao__foto {
+    padding: 20px;
+    border-radius: 10%;
+    width: 80%;
+}
+
+.foto_e_descricao__sobremim {
+    font-size: var(--fonte-maxima);
+    font-family: 'Krona One', sans-serif;
+    padding: 10px 0 10px 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.foto_e_descricao__subtitulocurriculo {
+    font-size: var(--fonte-menor);
+    font-family: 'Krona One', sans-serif;
+    padding: 10px 0 10px 10px;
+}
+
+.rodape {
+    background-color: var(--azul-claro);
+    color: var(--cor-principal);
+    font-family: 'Krona One', 'sans-serif';
+    font-size: larger;
+    padding: var(--fonte-menor);
+    text-align: center;
+}
+
+/*Media query*/
+@media (max-width: 1200px) /*Quando a largura máxima da janela for menor que 1200px*/{
+    .cabecalho {
+        padding: 2% 0;
+    }
+
+    .cabecalho__menu{
+        justify-content: center;
+    }
+
+    .foto_e_descricao {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: auto;
+    }
+
+    .foto_e_descricao__foto {
+        margin: 0 32vw;
+        width: 30%;
+    }
+
+    .curriculum {
+        width: 100%;
+    }
+
+    /*É possível criar um intervalo e união de condições:
+    @media (min-width: 480px ) and (max-width: 800px;
+    Assim, tablets podem ter sua configuração além dos celulares e computadores.*/
+}
