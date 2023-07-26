@@ -118,7 +118,7 @@ a {
     flex-direction: column;
     gap: 40px;
     width: 50%;
-}
+} 
 
 .apresentacao__conteudo__texto,
 .apresentacao__conteudo__description {
@@ -143,6 +143,14 @@ strong {
     justify-content: space-between;
 }
 
+.apresentacao__links__buttons {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .apresentacao__links__link {
     border-radius: 16px;
     color: var(--cor-branca);
@@ -152,7 +160,8 @@ strong {
     padding: 21.5px 0;
     text-align: center;
     text-decoration: none;
-    width: 50%;
+    min-width: 200px;
+    width: 12vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -162,6 +171,7 @@ strong {
 .apresentacao__links__link:hover {
     background-color: var(--cor-hover);
     padding: 21.5px 10px;
+    transition: all ease 0.5s
 }
 
 .apresentacao__links_subtitulo{
@@ -171,7 +181,8 @@ strong {
 }
 
 .apresentacao__aumento{
-    width: 50%; 
+    width: 50%;
+    border-radius: 30px;
 }
 
 .apresentacao__aumento:hover{
@@ -234,10 +245,16 @@ strong {
 
     .apresentacao__conteudo {
         width: auto;
+        gap: 3vh;
+    }
+
+    .apresentacao__links__link {
+        min-width: 30vw;
     }
 
     .cabecalho {
         padding: 6%;
+        padding-bottom: 1vh;
     }
 
     .cabecalho__menu{
@@ -246,7 +263,11 @@ strong {
 }
 
 @media (max-width: 480px) {
-    .idiom_change {
+    a {
+        padding: 2vw 24px;
+    }
+
+    .idiom_change, span, strong, a, p {
         font-size: var(--fonte-mobile-menor)
     }
 
@@ -255,11 +276,35 @@ strong {
         margin: 0;
     }
 
-    .apresentacao__conteudo__titulo {
+    .apresentacao__conteudo__titulo,
+    h1,
+    h2 {
         font-size: var(--fonte-mobile);
+    }
+
+    .apresentacao__links__buttons {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: inherit;
     }
 
     .apresentacao__links__text {
         display: none;
+    }
+
+    .apresentacao__links__link {
+        min-width: 0;
+        padding: 3%;
+    }
+
+    .apresentacao__links__logo {
+        margin: 25%; 
+        max-width: 90%;
+    }
+
+    .rodape {
+        font-size: 1vw;
     }
 }
