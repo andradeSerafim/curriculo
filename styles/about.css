@@ -8,8 +8,8 @@
     --destaque-de-texto-2:#F5EA25;
     --cor-hover: #000;
 
-    --fonte-menor: 1.5rem;
-    --fonte-maxima: 3rem;
+    --fonte-menor: 1.5vw;
+    --fonte-maxima: 3vw;
     --margens-laterais: 15%
 }
 
@@ -64,7 +64,7 @@ body{
     border-width: 1px;
     color: var(--azul-claro);
     font-family: 'Montserrat', sans-serif;
-    font-size: var(--fonte-menor);
+    font-size: var(--fonte-maxima);
     font-weight: 600;
     text-decoration: none;
 }
@@ -111,7 +111,7 @@ strong {
 
 .foto_e_descricao__descricoesminhas {
     font-family: 'Montserrat', sans-serif;
-    font-size: large;
+    font-size: var(--fonte-menor);
     padding: 0 0 0 10px;
 }
 
@@ -160,8 +160,9 @@ ul {
     }
 
     .foto_e_descricao {
-        flex-direction: column-reverse;
         align-items: center;
+        flex-direction: column-reverse;
+        padding: 5px 0;
         width: auto;
     }
 
@@ -176,5 +177,19 @@ ul {
 }
 
 @media (max-width: 428px) {
+    a {
+        padding: 2vw 24px;
+    }
 
+    .foto_e_descricao__sobremim {
+        padding: 5px 0;
+    }
+
+    .curriculum {
+        width: 80%;
+    }
+
+    .rodape {
+        font-size: 1vw;
+    }
 }
