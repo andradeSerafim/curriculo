@@ -228,6 +228,10 @@ strong {
         gap: 1vh;
     }
 
+    .apresentacao__aumento {
+        width: 100%;
+    }
+
     .apresentacao__conteudo {
         width: auto;
     }
@@ -249,10 +253,6 @@ strong {
     .apresentacao {
         gap: 1vh;
         margin: 0;
-    }
-
-    .apresentacao__aumento {
-        gap: 100%;
     }
 
     .apresentacao__conteudo__titulo {
