@@ -5,41 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre mim</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/about.css">
 </head>
 
 <body>
+    <input type="checkbox" id="english" class="cabecalho__english" placeholder="English / Português">
+    <label for="english" class="idiom_change">English / Português</label>
     <header class="cabecalho">
         <nav class="cabecalho__menu">
             <a href="index.html" class="cabecalho__menu__link">Home</a>
-            <a href="about.html" class="cabecalho__menu__link">Sobre mim</a>
         </nav>
     </header>
     <main class="foto_e_descricao">
-        <div>
-            <h1 class="foto_e_descricao__sobre_mim">Sobre mim</h1>
-            <h2 class="foto_e_descricao__subtitulo_curriculo">Currículo</h2>
-            <p class="foto_e_descricao__descricoes_minhas">Sou estudante de engenharia elétrica da UFBA e do curso de eletrotécnica do IFBA. Tenho formação completa no curso técnico de mecânica do SENAI CIMATEC.</p>
-            <h2 class="foto_e_descricao__subtitulo_curriculo">Experiências</h2>
-            <p class="foto_e_descricao__descricoes_minhas">TM Jr. - Empresa júnior de engenharia mecânica da UFBA.
-            </p>
-            <h2 class="foto_e_descricao__subtitulo_curriculo">Estudos</h2>
-            <div class="foto_e_descricao__descricoes_minhas">
-                <p>Alura - Começando com Flask.</p>
-                <p>Alura - Power BI.</p>
-                <p>Alura - Ciência de dados.</p>
-                <p>Alura - Orientação a objetos.</p>
-                <p>IFBA - Eletrotécnica.</p>
-                <p>UFBA - Bacharelado interdisciplinar em ciência e tecnologia.</p>
-                <p>UFBA - Engenharia elétrica.</p>
-            </div>
+        <div class="foto_e_descricao__list">
+            <h1 class="foto_e_descricao__sobremim">
+                <span class="foto_e_descricao__sobremim-eng">About me</span>
+                <span class="foto_e_descricao__sobremim-port">Sobre mim</span>
+            </h1>
+            <ul class="foto_e_descricao-port">
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Currículo</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas">Sou estudante de engenharia elétrica da UFBA e do curso de eletrotécnica do IFBA. Tenho formação completa no curso técnico de mecânica do SENAI CIMATEC.</li>
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Experiências</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - Empresa júnior de engenharia mecânica da UFBA.
+                <li class="foto_e_descricao__descricoesminhas">UFBA - Monitoria virtual de cálculo A (ou cálculo 1).
+                </li>
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Estudos</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Power BI</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Ciência de dados em Python</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Orientação a objetos em Python</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - CRUD com Flask</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - HTML com CSS</li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - SolidWorks - Análise de elementos finitos</li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - SolidWorks - Imagem renderizada</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - AutoCAD - Projetos elétricos residenciais</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - Linguagem LADDER</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - Projeto de transformadores de potência</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - SolidWorks - Desenho mecânico 3D e 2D</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - Manutenção mecânica</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - Torneamento e fresagem</li>
+            </ul>
+            <ul class="foto_e_descricao-eng">
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Curriculum</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas curriculum">I am a electrical engineer student at UFBA (Federal University of Bahia) and also electrotechnic technician student at IFBA (Federal Institute of Bahia). I concluded my mechanical technician student at SENAI CIMATEC (National Service for Industrial Training - Manufacturing and Technology Integrated Campus)</li>
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Experiences</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - Junior entrepreneur of mechanical engineer of UFBA</li>
+                <li class="foto_e_descricao__descricoesminhas">UFBA - Virtual monitoring of calculus A (or calculus 1).</li>
+                <li>
+                    <h2 class="foto_e_descricao__subtitulocurriculo">Study</h2>
+                </li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Power BI</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Data science in Python</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - Object-oriented programming (POO) in Python</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - CRUD with Flask</li>
+                <li class="foto_e_descricao__descricoesminhas">Alura - HTML with CSS</li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - SolidWorks - Análise de elementos finitos</li>
+                <li class="foto_e_descricao__descricoesminhas">TM Jr. - SolidWorks - Renderization image</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - AutoCAD - Residencial electrical projects</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - LADDER language</li>
+                <li class="foto_e_descricao__descricoesminhas">IFBA - Voltage transformer project</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - SolidWorks - 3D e 2D mechanical drawing</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - Mechanical maintenance</li>
+                <li class="foto_e_descricao__descricoesminhas">SENAI CIMATEC - Turning and milling</li>
+            </ul>
         </div>
         <div>
-            <img src="assets/Foto_na_galeria_de_arte.jpg" class="foto_e_descricao__foto" alt="Foto minha com camisa amarela e uma galeria de arte ao fundo com diversos quadros de artistas desconhecidos." >
+            <img src="assets/Foto3x4.jpg" alt="Foto 3x4 minha com camisa e fundo branco e barba e bigode." class="foto_e_descricao__foto">
         </div>
     </main>
     <footer class="rodape">
-        <p class="descricoes_minhas">Desenvolvido por mim com base nos cursos de HTLM e CSS de Alura cursos online de tecnologia.</p>
+        <p class="descricoesminhas-port">Desenvolvido por mim para revisão de HTLM.</p>
+        <p class="descricoesminhas-eng">Developed by myself for HTML review.</p>
     </footer>
 </body>
 </html>
