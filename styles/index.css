@@ -1,5 +1,3 @@
-/*O mais recomendado seria ordenar as classes do CSS na ordem nas quais aparecem, mas eu já havia começado a digitar em ordem alfabética.*/
-
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@1,300&display=swap');
 
 :root {
@@ -8,25 +6,26 @@
     --azul-claro: #22D4FD;
     --destaque-de-texto-1:#ffb452;
     --destaque-de-texto-2:#F5EA25;
-    /* --cor-hover: #272727; */
     --cor-hover: #000;
 
     --fonte-menor: 1.5rem;
     --fonte-maxima: 3rem;
-    --margens-laterais: 15%
-} /* Variáveis precisam ser declaradas com -- no início para que reconhecimento de variável, mas não propriedade.*/
+    --margens-laterais: 15%;
+    --fonte-mobile: 9vw;
+    --fonte-mobile-menor: 5vw;
+} 
 
 * {
     margin: 0;
     padding: 0
-} /*Todos so elementos*/
+}
 
 body{
     background-color: var(--cor-principal);
-    box-sizing: border-box; /*O conteúdo será encolhido para que o conteúdo filho fique todo dentro do pai.*/
+    box-sizing: border-box;
     color: var(--cor-branca);
     font: Times;
-    height: 100vh; /*100% do viewbody height. O conteúdo body ocupará toda a página.*/
+    height: 100vh;
     margin-top: 4vh;
 }
 
@@ -104,12 +103,10 @@ a {
     color: var(--cor-branca);
     border: 2px solid var(--azul-claro);
     padding: 24px;
-    /* background-color: #F5186E; */
 }
 
 .apresentacao {
-    /*display: flex; deixará os elementos em uma só linha se estiver sozinho.*/
-    align-items: center; /*Traz para o centro.*/
+    align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 2vh var(--margens-laterais);
@@ -120,8 +117,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 40px;
-    /*width: 615px;*/
-    width: 50%; /*Acompanhará a responsividade da página.*/
+    width: 50%;
 }
 
 .apresentacao__conteudo__texto,
@@ -131,17 +127,13 @@ a {
 }
 
 .apresentacao__conteudo__titulo {
-    /* font-size: 48px; */
-    font-size: 3rem; 
-    /*rem é um comprimento relativo no CCS enquanto px é absoluto. */
-    /*Logo, rem é preferido pela responsividade.*/
-    /* 1rem ~= 16px*/
+    font-size: 3rem;
     font-family: 'Krona One', sans-serif;
 }
 
 strong {
     color: var(--destaque-de-texto-1);
-} /*Esse ponto indica que é uma classe, mas não uma tag.*/
+}
 
 .apresentacao__links {
     display: flex;
@@ -180,13 +172,9 @@ strong {
 
 .apresentacao__aumento{
     width: 50%; 
-    /*Responsividade de altura e largura da imagem*/
-    /*Terá ajuste percentual em relação ao elemento pai.*/
 }
 
-.apresentacao__aumento:hover{ /*Isso cria um efeito de aumento em todas as imagens.*/
-    /* -xpedu-transform: scale(1.1);
-    -ms-transform: scale(1.1); Não sei porque foi usado pelo aluno Raoni Kirschner Sava.*/
+.apresentacao__aumento:hover{
     transform: scale(1.025);
 }
 
@@ -201,7 +189,7 @@ strong {
 
 .titulo_destaque {
     color: var(--destaque-de-texto-2);
-} /*Esse ponto indica que é uma classe, mas não uma tag.*/
+}
 
 .foto_e_descricao {
     display: flex;
@@ -233,17 +221,15 @@ strong {
     padding: 10px 0 10px 10px;
 }
 
-/*Media query*/
-@media (max-width: 1200px) /*Quando a largura máxima da janela for menor que 1200px*/{
+@media (max-width: 1200px) {
     .apresentacao {
         flex-direction: column-reverse;
-        /*O texto está nas primeiras linhas do HTML e a imagem depois.
-        Logo, column-reverse o colocará depois da imagem.*/
         padding: 5% 5%;
+        gap: 1vh;
     }
 
     .apresentacao__conteudo {
-        width: auto; /*Mesmo resultado de width: 100%*/
+        width: auto;
     }
 
     .cabecalho {
@@ -253,8 +239,27 @@ strong {
     .cabecalho__menu{
         justify-content: center;
     }
+}
 
-    /*É possível criar um intervalo e união de condições:
-    @media (min-width: 480px ) and (max-width: 800px;
-    Assim, tablets podem ter sua configuração além dos celulares e computadores.*/
+@media (max-width: 480px) {
+    .idiom_change {
+        font-size: var(--fonte-mobile-menor)
+    }
+
+    .apresentacao {
+        gap: 1vh;
+        margin: 0;
+    }
+
+    .apresentacao__aumento {
+        gap: 100%;
+    }
+
+    .apresentacao__conteudo__titulo {
+        font-size: var(--fonte-mobile);
+    }
+
+    .apresentacao__links__text {
+        display: none;
+    }
 }
